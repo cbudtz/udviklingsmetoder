@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+class Canvas
+abstract Shape {
+    float {abstract} getArea()
+    + {static} float PI
+}
+
+class Circle {
+    + setRadius(float)
+}
+
+class Rectangle {
+    + setSides(float,float)
+}
+
+class Square {
+    + setSides(float)
+}
+
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+Rectangle <|-- Square
+Canvas -r->  Shape : " 0..* - shapes"
+
+@enduml

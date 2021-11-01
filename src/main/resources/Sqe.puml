@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+":Canvas" -> "circle:Circle" ** : create
+":Canvas" -> "square: Square" ** : create
+":Canvas" -> "circle:Circle" : getArea()
+":Canvas" <-- "circle:Circle" : float
+":Canvas" -> "square: Square" : getArea()
+":Canvas" <-- "square: Square" : float
+":Canvas" -> ":Canvas": calculateTotal()
+
+@enduml
