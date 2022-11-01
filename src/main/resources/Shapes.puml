@@ -3,8 +3,8 @@
 skinparam classAttributeIconSize 0
 class Canvas
 abstract Shape {
-    float {abstract} getArea()
-    + {static} float PI
+    {abstract} getArea() : float
+    + {static} PI : float
 }
 
 class Circle {
@@ -23,6 +23,6 @@ class Square {
 Shape <|-- Circle
 Shape <|-- Rectangle
 Rectangle <|-- Square
-Canvas -r->  Shape : " 0..* - shapes"
+Canvas -r->  Shape : " -shapes 0..* "
 
 @enduml
